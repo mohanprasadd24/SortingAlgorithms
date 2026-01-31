@@ -7,6 +7,14 @@ public class selectionsort {
         System.out.print(Arrays.toString(arr));
 
     }
+
+    static void selection(int[]arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int last= arr.length-i-1;
+            int max=max(arr, 0,last);
+            swap(arr, max,last);
+        }
+    }
     static int max(int[] arr,int start, int last){
         int max=start;
         for (int i = start; i <= last; i++) {
@@ -20,12 +28,5 @@ public class selectionsort {
         int temp=arr[first];
         arr[first]=arr[second];
         arr[second]=temp;
-    }
-    static void selection(int[]arr) {
-        for (int i = 0; i < arr.length; i++) {
-            int last= arr.length-i-1;
-            int max=max(arr, 0,last);
-            swap(arr, max,last);
-        }
     }
 }
