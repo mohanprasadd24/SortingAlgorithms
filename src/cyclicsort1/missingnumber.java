@@ -7,8 +7,9 @@ public class missingnumber {
         System.out.println(missnum);
     }
     public static int missingnumberr(int[]arr){
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]<arr.length&&arr[i]!=arr[arr[i]]){
+        int i=0;
+        while(i<arr.length){
+            if(arr[i]<=arr.length&&arr[i]!=arr[arr[i]]){
                 int temp=arr[arr[i]];
                 arr[arr[i]]=arr[i];
                 arr[i]=temp;
